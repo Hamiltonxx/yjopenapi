@@ -12,6 +12,7 @@
 
 ## 图像抓取
 通常，抓取到的图像像素越高越好。以下是两个可以用来检测的示例.
+
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/Cracked_01.jpg" width="30%">
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/Cracked_07.jpg" width="30%">
 
@@ -19,30 +20,37 @@
 图像处理过程也分3步进行
 1. 灰度缩放和平均 (Gray scaling and averaging)
 首先，对图像进行模糊处理，使之在接下来的步骤中更易处理。
-<img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/blur1.jpg" width="30%">
-<img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/blur7.jpg" width="30%">
+
+<img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/blur-1.jpg" width="30%">
+<img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/blur-7.jpg" width="30%">
 
 2. 对数变换 (Logarithmic transformation)
 对数变换是指把图像里的像素值替换为对数值。这步用来做图像增强。
+
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/img_log-1.jpg" width="30%">
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/img_log-7.jpg" width="30%">
 
 3. 图像平滑:双边滤波 (Image smoothing: bilateral filter)
 双边滤波和高斯滤波的内容可以参考OpenCV内容
+
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/bilateral-1.jpg" width="30%">
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/bilateral-7.jpg" width="30%">
 
 ## 图像分割
 图像分割也分2步进行
 1. 边缘检测 (Canny edge detection)
+
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/edges-1.jpg" width="30%">
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/edges-7.jpg" width="30%">
+
 2. 形态转换 (Morphological transformation)
+
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/closing-1.jpg" width="30%">
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/closing-7.jpg" width="30%">
 
 ## 特征提取
 特征提取算法有SIFT,SURF,ORB等好几种，SIFT和SURF收费而ORB免费。ORB = Oriented FAST and Rotated BRIEF. 它计算速度快，匹配精准的特点。用ORB方法后，我们得到图像如下
+
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/CrackDetected-1.jpg" width="30%">
 <img src="https://cirraybucket.oss-cn-shanghai.aliyuncs.com/yijian/openapi/CrackDetected-7.jpg" width="30%">
 
